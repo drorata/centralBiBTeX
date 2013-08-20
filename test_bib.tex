@@ -1,0 +1,23 @@
+%% This file tests the correctness of the bib file.
+%% It was inspired by http://tex.stackexchange.com/a/128994/412
+
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[colorlinks]{hyperref}    % better urls in bibliography
+
+\usepackage[backend=biber,style=alphabetic,sorting=debug]{biblatex}
+% This part will use the bibtex key as the citation key
+\DeclareFieldFormat{labelalpha}{\thefield{entrykey}}
+\DeclareFieldFormat{extraalpha}{}
+\usepackage{csquotes}
+
+% \usepackage[backend=biber]{biblatex}
+\addbibresource{personalRef.bib}
+
+
+\begin{document}
+Test the complete \texttt{.bib} file: \nocite{*}.
+
+\printbibliography
+\end{document}

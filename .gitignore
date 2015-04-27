@@ -5,3 +5,8 @@ test_bib.blg
 test_bib.log
 test_bib.pdf
 test_bib.run.xml
+/test_bib.aux
+/test_bib.fdb_latexmk
+/test_bib.fls
+/test_bib.out
+/test_bib.synctex.gz
